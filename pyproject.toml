@@ -23,3 +23,8 @@ flyclaw = "flyclaw:main"
 markers = [
     "live: tests that make real API calls (deselect with '-m not live')",
 ]
+
+# ====== 新增如下内容（方案一） ======
+[tool.setuptools]
+packages = {find = {where = ["."], exclude = ["img", "cache", "sources", "tests", "docs"]}}
+# ====== 新增结束 ======
